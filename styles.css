@@ -309,31 +309,10 @@ input[type='submit'], input[type='reset'] {
     width: 80%;
 }
 
-.project_list {
-    width: 35%;
-    border-right: 1px solid black;
+.project_text_style {
+    text-align: center;
 }
 
-
-.project_list ul {
-    padding: 10px 0;
-}
-
-.project_list li {
-    text-align: left;
-    font-size: 24px;
-    list-style-type: none;
-}
-
-.project_list a {
-    color: #1a1650;
-}
-
-.project_list a:hover {
-    text-decoration: none;
-    color: rgba(26, 22, 80, 0.6);
-}
-
-.project_show {
-    width: 55%;
+.project_img {
+    max-height: 500px; 
 }
