@@ -1,0 +1,330 @@
+/*-------------COLORS----------------
+background-color: #b7e3e4 (light blue-ish)
+background color: #ff0d7b (bright pink)
+background color: #674b7c (purplish)
+color: #f47362 (salmon-orangey fot text to go with the purple)
+color: #f03f35 (red-ish to go with the light blue-ish background)
+color: #d8dbe2 (grey from picture)
+color: #d67725 (orange from picture)
+color: #846094 (purple-ish from picture)
+
+------------------------------------*/
+
+/*---------------FONTS-----------------
+1. font-family: 'Quicksand', sans-serif;
+-------------------------------------*/
+
+body {
+    font-family: 'Lora', serif;
+    font-weight: 400;
+    background-color: #f6f6f6;
+   }
+
+   .header_text {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    text-transform:uppercase;
+    font-size: 32px;
+    color: #1a1650;
+    text-align: center;
+   }
+
+   header {
+    overflow: hidden;
+   }
+
+  .clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+/*-------------------------------------
+---------------------------------------
+----------INDEX PAGE STYLING-----------
+---------------------------------------
+--------------------------------------*/
+
+/*----------NAVIGATION BAR------------*/
+
+    #navbar {
+        display: flex;
+        justify-content: center;
+
+        height: 120px;
+        width: 100%;
+        background-image: url("navbar_mountain_img2.png");
+
+        box-shadow: 0px 10px 20px 30px #050823;
+    }
+
+   nav li {
+       display: inline-block;
+       margin-right: 50px;
+       padding: 25px 20px;
+   }
+
+   .nav-link {
+        font-family: 'Montserrat', sans-serif;
+        text-decoration: none;
+        text-transform: uppercase;
+        font-size: 22px;
+        color: #d8dbe2;
+        position: relative;
+        padding: 8px;
+        margin-top: 30px;
+   }
+
+    nav ul {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+    }
+
+
+/*-----------HOVER LINE ANIMATION---------------*/
+
+   .nav-link:hover {
+        color: #d8dbe2;
+   }
+
+   .nav-link::before {
+       content: "";
+       display: block;
+       height: 3px;
+       background-color: #c382a9;
+
+       position: absolute;
+       bottom: 2px;
+       width: 0%;
+   }
+
+   .nav-link:hover::before {
+    width: 100%;
+
+    transition-timing-function: ease-in-out;
+    transition-duration: 250ms;
+
+   }
+
+/*-------------SHADOW BOX STYLYING---------------*/
+
+    #girl_img {
+        position: fixed;
+        right: 0;
+        bottom: 0;
+     }
+
+    .box_style {
+        position: relative;
+        margin: 40px auto;
+        padding: 50px;
+        padding-top: 30px;
+        text-align: justify;
+        box-shadow: -15px 15px 30px grey;
+        background-color: rgba(246, 246, 246, 0.8);
+        width: 70%;
+        max-width: 90%;
+        font-size: 24px;
+    }
+
+/*------------UNDERLINE ANIMATION------------*/
+
+    .line {
+        margin-bottom: 50px;
+        width: 100%;
+        border-bottom: 3px solid black;
+        border-top-width: 0px;
+        animation-name: line_animation;
+        animation-duration: 500ms;
+        animation-fill-mode:forwards;
+        animation-timing-function: linear;
+    }
+
+    @keyframes line_animation {
+        0% {
+            width: 0%;
+            border-bottom: 3px solid #d8dbe2 ;
+        }
+
+        50% {
+            width: 50%;
+            border-bottom: 3px solid #d67725;
+        }
+
+        100% {
+            width: 100%;
+            border-bottom: 3px solid #846094;
+        }
+
+    }
+
+
+    .wave img{
+        width: 30px;
+    }
+
+    @media (max-width: 1083px) {
+        #welcome-section p {
+            font-size: 2vw;
+        }
+
+
+    }
+
+    @media (max-width: 679px) {
+
+        #navbar {
+            height: 140px;
+            align-items: center;
+        }
+
+        main {
+            top: 140px;
+        }
+
+    }
+
+/*-------------------------------------
+---------------------------------------
+------------CONTACT ME PAGE------------
+---------------------------------------
+--------------------------------------*/
+
+/*----------FORM STYLING--------------*/
+
+form {
+    font-size: 24px;
+    color: #1a1650;
+}
+
+form .row {
+    margin-left: 10px;
+    display: flex;
+}
+
+.row label {
+    flex: 20%;
+}
+
+
+.row input {
+    flex: 50%;
+    margin-right: 50px;
+    margin-bottom: 20px;
+}
+
+textarea {
+    width: 96%;
+}
+
+input[type='submit'], input[type='reset'] {
+    margin-top: 10px;
+    margin-right: 10px;
+    font-size: 18px;
+}
+
+
+
+
+
+/*----------CONTACT LINKS--------------*/
+    hr {
+        display: block;
+        height: 5px;
+        background-color: #1a1650;
+    }
+
+    .all-links {
+        padding-top: 10px;
+        padding-bottom: 10px;
+        display: flex;
+        justify-content: center;
+
+    }
+
+    .link_image {
+        margin-right: 50px;
+    }
+
+    .link_image img {
+        height: 40px;
+    }
+
+    .link_image a {
+        text-decoration: none;
+        font-size: 28px;
+
+    }
+
+    .link_image:hover {
+        transform:translateY(-10px);
+        transition: transform 0.3s ease-out;
+    }
+
+
+/*-------------------------------------
+---------------------------------------
+------------ABOUT ME PAGE--------------
+---------------------------------------
+--------------------------------------*/
+
+#about_me img {
+    max-width: 30%;
+    float: left;
+    width: 30%;
+    margin-right: 25px;
+
+}
+
+#about_me span {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    text-transform:uppercase;
+    font-size: 24px;
+}
+
+.text_box {
+    width: 100%;
+    position: relative;
+    text-align: justify;
+}
+
+/*-------------------------------------
+---------------------------------------
+----------PROJECT PAGE STYLING-----------
+---------------------------------------
+--------------------------------------*/
+
+#projects {
+    width: 80%;
+}
+
+.project_list {
+    width: 35%;
+    border-right: 1px solid black;
+}
+
+
+.project_list ul {
+    padding: 10px 0;
+}
+
+.project_list li {
+    text-align: left;
+    font-size: 24px;
+    list-style-type: none;
+}
+
+.project_list a {
+    color: #1a1650;
+}
+
+.project_list a:hover {
+    text-decoration: none;
+    color: rgba(26, 22, 80, 0.6);
+}
+
+.project_show {
+    width: 55%;
+}
